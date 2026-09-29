@@ -31,18 +31,18 @@ int main()
     const double x = 0.2;
     const double y = 0.04;
     const double z = 1.1;
-    print("A = %lf", A(x, y, z))
-    print("B = %lf", A(x, y, z))
+    printf("A = %lf\n", A(x, y, z));
+    printf("B = %lf", B(x, y, z));
     
     return 0;
 }
 
 double A(const double x, const double y, const double z)
 {
-    return double pow(sin(pow(pow(x, 2) + z), 2), 3) - pow(x/y, 0.5);
+    return pow(sin(pow(pow(x, 2) + z, 2)), 3) - pow((x / y), 0.5);
 }
 
 double B(const double x, const double y, const double z)
 {
-    return pow(x, 2)/z + cos(pow(x + y), 3);
+    return pow(x, 2)/z + cos(pow((x + y), 3));
 }
