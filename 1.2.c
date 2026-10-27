@@ -7,19 +7,19 @@
 
 /**
  * @brief Вычисляет объём конуса
- * @param R - радиус шара
+ * @param r - радиус шара
  * @param a - угол при вершине в осевом сечении конуса
  * @return Рассчитанное значение
  */
-double V(const double R, const double a);
+double v(const double r, const double a);
 
 /**
  * @brief Вычисляет полную площадь поверхности конуса
- * @param R - радиус шара
+ * @param r - радиус шара
  * @param a - угол при вершине в осевом сечении конуса
  * @return Рассчитанное значение
  */
-double S(const double R, const double a);
+double s(const double r, const double a);
 
 /**
  * @brief Считывает с клавиатуры занчение с плавающей точкой
@@ -34,23 +34,23 @@ double getDouble();
 int main()
 {
     printf("Введите радиус шара: ");
-    double R = getDouble();
+    double r = getDouble();
     printf("Введите угол при вершине в осевом сечении конуса: ");
     double a = getDouble();
-    printf("Volume is %lf\n", V(R,a));
-    printf("Square is %lf", S(R, a));
+    printf("Volume is %lf\n", v(r,a));
+    printf("Square is %lf", s(r, a));
     return 0;
 }
 
-double V(const double R, const double a)
+double v(const double r, const double a)
 {
-    return (1.0 / 3.0) * M_PI * pow(R * sin(a * M_PI / 180.0), 2) * R * (cos(a * M_PI / 180.0) + 1.0);
+    return (1.0 / 3.0) * M_PI * pow(r * sin(a * M_PI / 180.0), 2) * r * (cos(a * M_PI / 180.0) + 1.0);
 }
 
 
-double S(const double R, const double a)
+double s(const double r, const double a)
 {
-    return M_PI * (R * sin(a * M_PI / 180.0)) * ((R * sin(a * M_PI / 180.0)) + (2.0 * R * cos((a * M_PI / 180.0) / 2.0)));
+    return M_PI * (r * sin(a * M_PI / 180.0)) * ((r * sin(a * M_PI / 180.0)) + (2.0 * r * cos((a * M_PI / 180.0) / 2.0)));
 }
 
 double getDouble()
