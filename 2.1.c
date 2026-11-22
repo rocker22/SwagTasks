@@ -39,13 +39,13 @@ int getInt();
  * @brief Выводит название дня недели по номеру
  * @param num Введённый номер
  */
-void printDayOfWeek(int num);
+void printDayOfWeek(const int num);
 
 /**
  * @brief Выводит название месяца по номеру
  * @param num Введённый номер
  */
-void printMonth(int num);
+void printMonth(const int num);
 
 /**
  * @brief Точка входа в программу
@@ -77,7 +77,7 @@ int getInt()
 }
 
 
-void printDayOfWeek(int num)
+void printDayOfWeek(const int num)
 {
     switch (num)
     {
@@ -92,7 +92,7 @@ void printDayOfWeek(int num)
     }
 }
 
-void printMonth(int num)
+void printMonth(const int num)
 {
     switch (num)
     {
